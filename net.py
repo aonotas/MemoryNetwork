@@ -58,7 +58,7 @@ class MemoryNet(chainer.Chain):
         return functions.sum(self.B(x_query), axis=1)
 
     def encode_output(self, x_input):
-        return functions.sum(self.B(x_input), axis=1)
+        return functions.sum(self.C(x_input), axis=1)
 
     def encode(self, x_input, x_query, answer):
         m = self.encode_input(x_input)
